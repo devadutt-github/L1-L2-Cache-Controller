@@ -18,10 +18,10 @@
 //
 // Dependencies:  None
 //
-// Revision:   0.01  Initial version
+// Revision:   0.02
 // 
 //
-// Additional Comments: Needs future modifications to support L2 Cache
+// Additional Comments: Needs future modifications to support L2 write back
 //
 //
 ///////////////////////////////////////////////////////////////
@@ -217,7 +217,7 @@ always @(posedge clk or negedge reset_n) begin
                     case(l2_way_rr)
                             2'b00 : begin 
                                 l2_cache_memory[l2_cache_index][31 :0] <= l1_cache_memory[l1_cache_index];
-                                l2_tag_array[l2_cache_index][22:0] <= 23'h000020; // Shift and assign
+                                l2_tag_array[l2_cache_index][22:0] <= l1_tag_array[l1_cache_index][23:1]; // Shift and assign
                                 l2_valid[l2_cache_index][0] <= 1'b1;
                             end
 
