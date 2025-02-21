@@ -18,10 +18,10 @@
 //
 // Dependencies:  None
 //
-// Revision:   0.01  Initial version
+// Revision:   0.02
 // 
 //
-// Additional Comments: Needs future modifications to support L2 Cache
+// Additional Comments: Needs future modifications to support L2 Cache write back
 //
 //
 ///////////////////////////////////////////////////////////////
